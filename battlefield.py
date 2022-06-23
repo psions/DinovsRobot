@@ -1,20 +1,20 @@
 import random
+from typing_extensions import Self
+import fleet
+import herd
+import Robots
+import dinosaurs
 
-from fleet import Fleet
-from herd import Herd
-from robot import Robot
-from dinosaur import Dinosaur
 
-
-class Battlfield:
+class battlfield:
     def __init__(self):
-        self.fleet = Fleet()
-        self.herd = Herd()
+        self.fleet = fleet
+        self.fleet = herd
 
 
     def run_game(self):
-        self.display_welcome()
-        self.choose_team = self.choose_team()
+        self.welcome_to_the_game()
+        self.team = self.choose_team
         self.battle()
 
 
@@ -28,7 +28,7 @@ class Battlfield:
         if choose_team == 1:
             print(' Welcome to the future with the Robots and the Fleet')
             return choose_team
-        elif choose_team == 2:
+        else choose_team == 2:
             print(' Welcome to the stone age of the Dinosaur Herd')
             return choose_team
 
@@ -43,7 +43,7 @@ class Battlfield:
             random_turn = 2
 
 
-        if first_turn == 1:
+     if first_turn == 1:
          while len(self.fleet.Robots) > 0 and len(self.herd.dinosaurs) >0:
 
             self.Robot_turn()
